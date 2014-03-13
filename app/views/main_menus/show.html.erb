@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Mainmenuname:</b>
+  <%= @main_menu.mainmenuname %>
+</p>
+
+<p>&#x25cf&#x25cf&#x25cf</p>
+
+<ul class="dropdown-menu span6">
+  <% @main_menu.child_menus.each do |cm| %>
+    <li class="column-menu span3">
+      <%= link_to cm.childmenuname, cmenu %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Edit', edit_main_menu_path(@main_menu) %> |
+<%= link_to 'Back', main_menus_path %>

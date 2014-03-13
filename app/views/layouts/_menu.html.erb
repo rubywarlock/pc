@@ -1,0 +1,29 @@
+<ul class="dropdown-menu span6">
+
+  <li class="column-menu span3">
+    <ul>
+      <% @mainmenu.each_with_index do |mm,n| %>
+        <% if n % 2 == 0 %>
+          <li class="nav-header my-gen-menu-name"><span><%= link_to mm.mainmenuname, mm %></span></li>
+          <% mm.child_menus.each do |cmenu| %>
+            <li><%= link_to cmenu.childmenuname, cmenu %></li>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  </li>
+
+  <li class="column-menu span3">
+    <ul>
+      <% @mainmenu.each_with_index do |mm,n| %>
+        <% if n % 2 != 0 %>
+          <li class="nav-header my-gen-menu-name"><span><%= link_to mm.mainmenuname, mm %></span></li>
+          <% mm.child_menus.each do |cmenu| %>
+            <li><%= link_to cmenu.childmenuname, cmenu %></li>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  </li>
+
+</ul>

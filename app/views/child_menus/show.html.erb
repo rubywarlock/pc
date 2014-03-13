@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Childmenuname:</b>
+  <%= @child_menu.childmenuname %>
+</p>
+
+<p>
+  <b>Mainmenu:</b>
+  <%= @child_menu.mainmenu_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_child_menu_path(@child_menu) %> |
+<%= link_to 'Back', child_menus_path %>
