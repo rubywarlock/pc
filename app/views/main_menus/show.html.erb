@@ -7,14 +7,21 @@
 
 <p>&#x25cf&#x25cf&#x25cf</p>
 
-<ul class="dropdown-menu span6">
+<ul>
   <% @main_menu.child_menus.each do |cm| %>
     <li class="column-menu span3">
-      <%= link_to cm.childmenuname, cmenu %>
+      <%= link_to cm.childmenuname, cm %>
     </li>
   <% end %>
 </ul>
 
+<p>Add Child menu</p>
+
+<%= form_for @main_menu.child_menus.build do |f| %>
+	<%= f.text_field :main_menu_id, value: @main_menu.id, type: "hidden" %>
+	<p><%= f.text_field :childmenuname, placeholder: "Child menu name" %></p>
+  <p><%= f.submit %></p>
+<% end %>
 
 <%= link_to 'Edit', edit_main_menu_path(@main_menu) %> |
 <%= link_to 'Back', main_menus_path %>
