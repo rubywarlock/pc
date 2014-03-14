@@ -13,3 +13,20 @@
 
 <%= link_to 'Edit', edit_child_menu_path(@child_menu) %> |
 <%= link_to 'Back', child_menus_path %>
+
+<% @child_menu.contents.each do |c| %>
+	<div class="content-block">
+		<p><%= c.title %></p>
+		<p><%= c.post %></p>
+	</div>
+<% end %>
+
+
+<div class="form-content-block">
+  <%= form_for @child_menu.contents.build do |fc| %>
+    <%= fc.text_field :child_menu_id, valud: @child_menu.id, type: "hidden" %>
+    <p><%= fc.text_field :title %></p>
+    <p><%= fc.text_area :post %></p>
+    <p><%= fc.submit %></p>
+  <% end %>
+</div>

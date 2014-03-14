@@ -1,4 +1,6 @@
 PcRails3::Application.routes.draw do
+  resources :contents
+
   #get "static_pages/Home"
 
   get "static_pages/About"
@@ -7,7 +9,8 @@ PcRails3::Application.routes.draw do
   resources :child_menus
   resources :main_menus
 
-	root to: "static_pages#Home"
+	#root to: "static_pages#Home"
+  root to: "contents#index"
 
 
   # The priority is based upon order of creation:

@@ -11,11 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140313092614) do
+ActiveRecord::Schema.define(:version => 20140314085122) do
 
   create_table "child_menus", :force => true do |t|
     t.string   "childmenuname"
     t.integer  "main_menu_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "contents", :force => true do |t|
+    t.string   "title"
+    t.text     "post"
+    t.integer  "child_menu_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
