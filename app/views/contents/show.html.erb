@@ -1,20 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @content.title %>
-</p>
 
-<p>
-  <b>Post:</b>
-  <%= @content.post %>
-</p>
+  <div class="content-block">
+    <p>Child menu ID: <%= @content.child_menu_id %></p>
 
-<p>
-  <b>Child menu:</b>
-  <%= @content.child_menu_id %>
-</p>
+    <p>
+      <b>Title:</b> <%= @content.title %>
+    </p>
+
+    <p>
+      <b>Post:</b>
+      <%= @content.post %>
+    </p>
+
+    <p>files</p>
+
+    <div class="thumb">
+      <ul>
+        <% @content.assets.each do |files| %>
+          <li><%= files.asset_file_name %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <%= link_to 'Edit', edit_content_path(@content) %> |
+    <%= link_to 'Back', contents_path %>
+  </div>
 
 
-<%= link_to 'Edit', edit_content_path(@content) %> |
-<%= link_to 'Back', contents_path %>

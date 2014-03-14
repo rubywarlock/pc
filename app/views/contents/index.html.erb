@@ -1,4 +1,4 @@
-<h1>Listing contents</h1>
+<!--<h1>Listing contents</h1>
 
 <table>
   <tr>
@@ -10,17 +10,31 @@
     <th></th>
   </tr>
 
-<% @contents.each do |content| %>
+<%# @contents.each do |content| %>
   <tr>
-    <td><%= content.title %></td>
-    <td><%= content.post %></td>
-    <td><%= content.child_menu_id %></td>
-    <td><%= link_to 'Show', content %></td>
-    <td><%= link_to 'Edit', edit_content_path(content) %></td>
-    <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%#= content.title %></td>
+    <td><%#= content.post %></td>
+    <td><%#= content.child_menu_id %></td>
+    <td><%#= link_to 'Show', content %></td>
+    <td><%#= link_to 'Edit', edit_content_path(content) %></td>
+    <td><%#= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
+<%# end %>
+</table> -->
+
+<% @contents.each do |content| %>
+
+  <div class="content-block">
+    <h2><%= content.title %></h2>
+    <p><%= content.post %></p>
+	  <p>
+	    <%= link_to 'Show', content %> |
+	    <%= link_to 'Edit', edit_content_path(content) %> |
+	    <%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %>
+	  </p>
+  </div>
+
 <% end %>
-</table>
 
 <br />
 

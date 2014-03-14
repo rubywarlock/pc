@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 gem 'rails', '3.2.17'
+gem 'nifty-generators'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
-
 
 group :assets do
 	gem 'sass-rails',   '~> 3.2.3'
@@ -25,7 +25,7 @@ gem 'gretel'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 
-gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+gem 'paperclip'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

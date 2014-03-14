@@ -24,7 +24,10 @@ class ContentsController < ApplicationController
   # GET /contents/new
   # GET /contents/new.json
   def new
-    @content = Content.new
+    @content = Content.new(:child_menu_id => params[:id])
+    @content.assets.build
+
+    @child_menu_id = params[:child_menu_id]
 
     respond_to do |format|
       format.html # new.html.erb
