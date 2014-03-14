@@ -9,7 +9,7 @@
 
 <ul>
   <% @main_menu.child_menus.each do |cm| %>
-    <li class="column-menu span3">
+    <li>
       <%= link_to cm.childmenuname, cm %>
     </li>
   <% end %>

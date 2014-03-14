@@ -28,11 +28,6 @@
   //float:left;
 }
 
-.my-gen-menu-name {
-  position: relative;
-  right: 10px;
-}
-
 .menu-box {
   display:block;
   width:200px;
@@ -68,12 +63,44 @@
 }
 */
 
+.main-menu-name {
+  list-style:none;
+  padding-top:10px;
+}
+
+.child-menu-name{
+  list-style-position:inside;
+}
+
+.head-menu{
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 400px;
+  height: 50px;*/
+  background: #d9d7d3;
+  .head-menu-block{
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    ul{
+      display:inline-block;
+      vertical-align:top;
+      li{
+        width:200px;
+        white-space:pre-line;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+
 .column-menu{
   display: inline-block;
 }
 
 
-.navbar .dropdown-menu > li.column-menu ul
+/*.navbar .dropdown-menu > li.column-menu ul
 {
   display: inline-block;
   list-style: none outside none;
@@ -116,4 +143,4 @@
   margin-right: auto;
   margin-left: auto;
   width:490px;
-}
+}*/

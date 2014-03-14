@@ -2,6 +2,7 @@ PcRails3::Application.routes.draw do
   #get "static_pages/Home"
 
   get "static_pages/About"
+  get "static_pages/tools"
 
   resources :child_menus
   resources :main_menus

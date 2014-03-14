@@ -11,9 +11,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	APP PAGE
+	<%= link_to "APP PAGE", root_path, class: "root-link" %>
+	<%= link_to "MAIN MENU TOOLS", main_menus_path, class: "root-link" %>
 	<%= render "layouts/menu", :mainmenu => @mainmenu %>
 <%= yield %>
+
+<div class="center">&#x25cf&#x25cf&#x25cf</div>
 
 
 	<div class="container">
